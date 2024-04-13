@@ -1,0 +1,27 @@
+[package]
+name = "l2-sequencer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "sequencer-server"
+path = "src/server.rs"
+
+[[bin]]
+name = "sequencer-client"
+path = "src/client.rs"
+
+[dependencies]
+tonic = "0.7"
+prost = "0.10"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1.0", features = ["derive"] }
+celestia-types = { version = "0.1.1" }
+celestia-rpc = {version = "0.1.1" }
+jsonrpsee = { version = "0.20", features = ["client-core", "macros"] }
+reqwest = { version = "0.11", features = ["json"] }
+
+[build-dependencies]
+tonic-build = "0.7"

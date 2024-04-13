@@ -1,0 +1,29 @@
+syntax = "proto3";
+package batcher;
+
+service Batcher{
+
+    rpc CreateBatch (CreateBatchRequest) returns (CreateBatchResponse);
+
+    rpc DecodeBatch (CreateBatchResponse) returns (CreateBatchRequest);
+
+}
+
+message CreateBatchRequest{
+    repeated TxRequest txs = 1;
+}
+
+message CreateBatchResponse{
+    bytes batchedTx = 1;
+}
+
+message TxRequest{
+    string from = 1;
+    string to = 2;
+    string amount = 3;
+    string nonce = 4;
+    string sign = 5;
+    string v = 6;
+    string r = 7;
+    string s = 8;
+}

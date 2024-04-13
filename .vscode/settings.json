@@ -1,0 +1,8 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./l2-sequencer/Cargo.toml",
+        "./l2-batcher/Cargo.toml",
+        "./l2-sequencer/Cargo.toml",
+        "./l2-sequencer/Cargo.toml"
+    ]
+}

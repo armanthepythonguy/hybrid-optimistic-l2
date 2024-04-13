@@ -1,0 +1,21 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.1",
+    "@grpc/proto-loader": "^0.7.10",
+    "axios": "^1.6.8",
+    "chalk": "^5.3.0",
+    "ethers": "^5.7.2",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.15"
+  }
+}

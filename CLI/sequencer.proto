@@ -1,0 +1,24 @@
+syntax = "proto3";
+package sequencer;
+
+message TxRequest{
+    string from = 1;
+    string to = 2;
+    string amount = 3;
+    string nonce = 4;
+    string sign = 5;
+    string v = 6;
+    string r = 7;
+    string s = 8;
+}
+
+message TxReceipt{
+    string txhash = 1;
+    string gasUsed = 2;
+}
+
+service Sequencer {
+
+    rpc SubmitTransaction(TxRequest) returns (TxReceipt);
+
+}
